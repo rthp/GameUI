@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="warApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/our_script.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script> 
+        <title>WAR</title>
+    </head>
+    <body ng-controller="WarController">
+    <div class="navbar navbar-static-top navbar-inverse mynavbar" style="background-color:#384f29;" >
+        <div class="container">
+          <a href="#" class="navbar-brand">WAR</a>
+          <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+              <span class="glyphicon glyphicon-th-list"></span>
+          </button>
+          <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active"> <a href="#home"> <span class= "glyphicon glyphicon-home"> </span> Home </a> </li>  
+              <li> <a href="#profile" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Profile </a> </li>
+              <li class="dropdown">
+                <a href="#play" class="drop-toggle"> <span class="glyphicon glyphicon-play"></span> Play Game <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li> <a href="#single">Single Player</a></li>
+                  <li><a href="#multiple">Multiple Player</a></li>
+                </ul> 
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li> <a href="#"> <span class="glyphicon glyphicon-picture"></span> Welcome {{ nickname | uppercase}} </a></li>
+              <li> <a href="#logout"><span class="glyphicon glyphicon-off"></span> Logout</a> </li>
+            </ul>
+          </div>
+        </div>  
+      </div>   
+
+      <div class = "modal fade" id="profile" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" type="reset"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> 
+                <h5> {{nickname}} </h5>
+                <h4 class="modal-title" id="profileLabel"> PROFILE </h4>
+              </div>
+              <div class="modal-body bg-danger">
+                Enter your nickname: 
+                <input type="text" ng-model="nickname" />
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="reset"> Close </button>
+                <button class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+      </div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/our_script.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
